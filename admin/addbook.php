@@ -44,12 +44,12 @@ require('includes/config.php');
 						<b>Category:</b><br>
 						<select  name="cat">
 								<?php
-									$query="select * from category ";
+									$query="select * from fs_category ";
 									$res=mysqli_query($conn,$query);
 									while($row=mysqli_fetch_assoc($res))
 									{
 									echo "<option disabled>".$row['cat_nm'];
-									$q2 = "select * from subcat where parent_id = ".$row['cat_id'];
+									$q2 = "select * from fs_subcat where parent_id = ".$row['cat_id'];
 									$res2 = mysqli_query($conn,$q2) or die("Can't Execute Query..");
 									while($row2 = mysqli_fetch_assoc($res2))
 									{	

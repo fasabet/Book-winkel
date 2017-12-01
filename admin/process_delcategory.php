@@ -13,7 +13,7 @@ if (!empty($_POST)) {
         }
     } else {
         $delcat = $_POST['del'];
-        $query = "delete from category where cat_nm ='$delcat' ";
+        $query = "delete from fs_category where cat_nm ='$delcat' ";
         mysqli_query($conn, $query) or die("can't Execute...");
         header("location:category.php");
     }

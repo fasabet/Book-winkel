@@ -7,7 +7,7 @@
 	
 	$cat=$_GET['subcatid'];
 	
-	$totalq="select count(*) \"total\" from book where b_subcat='$cat'";
+	$totalq="select count(*) \"total\" from fs_book where b_subcat='$cat'";
 	
 	$totalres=mysql_query($totalq,$link) or die("Can't Execute Query...");
 	$totalrow=mysql_fetch_assoc($totalres);

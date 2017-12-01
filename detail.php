@@ -3,7 +3,7 @@
 	
 	$id=$_GET['id'];
 	
-	$q="select * from book where b_id=$id";
+	$q="select * from fs_book where b_id=$id";
 	
 	$res=mysqli_query($conn,$q) or die("Can't Execute Query..");
 	$row=mysqli_fetch_assoc($res);

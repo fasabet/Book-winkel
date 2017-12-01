@@ -2,7 +2,7 @@
     require('includes/config.php');
     session_start();
     $cat = $_GET['cat_nm'];
-    $q = "select * from subcat where parent_id = " . $_GET['cat'];
+    $q = "select * from fs_subcat where parent_id = " . $_GET['cat'];
     $res = mysqli_query($conn, $q) or die("Can't Execute Query..");
     $row1 = mysqli_fetch_assoc($res);
     if ($_GET['catnm'] == $row1['subcat_nm']) {

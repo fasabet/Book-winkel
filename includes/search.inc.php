@@ -31,7 +31,7 @@
             <h2>Categories</h2>
             <ul>
                 <?php
-                $query = "select * from category ";
+                $query = "select * from fs_category ";
 
                 $res = mysqli_query($conn, $query);
 

@@ -47,7 +47,7 @@ require('includes/config.php');
                     <br>
                     <select name="del">
                         <?php
-                        $query = "select * from category ";
+                        $query = "select * from fs_category ";
                         $res = mysqli_query($conn, $query);
                         while ($row = mysqli_fetch_assoc($res)) {
                             echo "<option>" . $row['cat_nm'];

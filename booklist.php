@@ -2,7 +2,7 @@
 require('includes/config.php');
  session_start();
 	$cat=$_GET['subcatid'];
-	$totalq="select count(*) \"total\" from book where b_subcat='$cat'";
+	$totalq="select count(*) \"total\" from fs_book where b_subcat='$cat'";
 	$totalres=mysqli_query($conn,$totalq) or die("Can't Execute Query...");
 	$totalrow=mysqli_fetch_assoc($totalres);
 	$page_per_page=6;
@@ -37,7 +37,7 @@ require('includes/config.php');
                         <br><br><br><br><br>
                         <?php
                         $k = ($page_current_page - 1) * $page_per_page;
-                        $query = "select *from book where b_subcat='$cat' LIMIT " . $k . "," . $page_per_page;
+                        $query = "select *from fs_book where b_subcat='$cat' LIMIT " . $k . "," . $page_per_page;
                         $res = mysqli_query($conn, $query) or die("Can't Execute Query...");
                         $count = 0;
                         while ($row = mysqli_fetch_assoc($res)) {

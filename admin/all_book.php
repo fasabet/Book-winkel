@@ -2,7 +2,7 @@
 session_start();
 require('includes/config.php');
 
-	$q="select * from book";
+	$q="select * from fs_book";
 	 $res=mysqli_query($conn,$q) or die("Can't Execute Query...");
 	?>
 

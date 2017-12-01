@@ -23,7 +23,7 @@ require('includes/config.php');
 		
 			$cat=$_POST['cat'];
 			
-			$query="insert into category(cat_nm) values('$cat')";
+			$query="insert into fs_category(cat_nm) values('$cat')";
 			
 			mysqli_query($conn,$query) or die("can't Execute...");
 			

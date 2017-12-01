@@ -45,7 +45,7 @@ require('includes/config.php');
 			$b_isbn=$_POST['isbn'];
 			$b_pages=$_POST['pages'];
 			$b_price=$_POST['price'];
-			$query="insert into book(b_nm,b_subcat,b_desc,b_edition,b_publisher,b_isbn,b_page,b_price,b_img)
+			$query="insert into fs_book(b_nm,b_subcat,b_desc,b_edition,b_publisher,b_isbn,b_page,b_price,b_img)
 			values('$b_nm','$b_cat','$b_desc','$b_edition','$b_publisher','$b_isbn',$b_pages,$b_price,'$b_img')";
 			mysqli_query($conn,$query) or die($query."Can't Connect to Query...");
 			header("location:addbook.php");

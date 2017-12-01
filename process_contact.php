@@ -21,7 +21,7 @@ if (!empty($_POST)) {
         $nm = $_POST['nm'];
         $email = $_POST['email'];
         $question = $_POST['query'];
-        $query = "insert into contact(con_nm,con_email,con_query)
+        $query = "insert into fs_contact(con_nm,con_email,con_query)
 			values('$nm','$email','$question')";
         mysqli_query($conn, $query) or die("Can't Execute Query...");
         header("location:contact.php");

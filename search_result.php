@@ -5,7 +5,7 @@ require('includes/config.php');
 	
 	
 	$search=$_GET['s'];
-	$query="select *from book where b_nm like '%$search%'";
+	$query="select *from fs_book where b_nm like '%$search%'";
 	
 	$res=mysqli_query($conn,$query) or die("Can't Execute Query...");
 

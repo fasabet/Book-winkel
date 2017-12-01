@@ -23,7 +23,7 @@ require('includes/config.php');
 		{
 			$unm=$_POST['usernm'];
 			
-			$q="select * from user where u_unm='$unm'";
+			$q="select * from fs_user where u_unm='$unm'";
 			
 			$res=mysqli_query($conn,$q) or die("wrong query");
 			

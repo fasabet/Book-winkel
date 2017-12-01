@@ -42,7 +42,7 @@
                             <select  name="parent">
                                 <?php
                                 require('includes/config.php');
-                                $query = "select * from category ";
+                                $query = "select * from fs_category ";
                                 $res = mysqli_query($conn, $query);
                                 while ($row = mysqli_fetch_assoc($res)) {
                                     echo "<option value='" . $row['cat_id'] . "'>" . $row['cat_nm'];
@@ -65,11 +65,11 @@
                                 <br>
                                 <select  name="subcatnm">
                                     <?php
-                                    $query = "select * from category ";
+                                    $query = "select * from fs_category ";
                                     $res = mysqli_query($conn, $query);
                                     while ($row = mysqli_fetch_assoc($res)) {
                                         echo "<option>" . $row['cat_nm'];
-                                        $qq = "select * from subcat where parent_id=" . $row['cat_id'];
+                                        $qq = "select * from fs_subcat where parent_id=" . $row['cat_id'];
                                         $ress = mysqli_query($conn, $qq) or die("wrong delete subcat query..");
                                         while ($roww = mysqli_fetch_assoc($ress)) {
                                             echo "<option value='" . $roww['subcat_id'] . "'> ---> " . $roww['subcat_nm'];

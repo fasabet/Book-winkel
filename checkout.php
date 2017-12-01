@@ -5,7 +5,7 @@ extract($_SESSION);
 require('includes/config.php');
 //echo $uid;
 if (isset($submit)) {
-    $query = "insert into shipping_details(name,address,postal_code,city,state,phone,f_id) values('$name','$address','$pc','$city','$state','$phone','$uid')";
+    $query = "insert into fs_shipping_details(name,address,postal_code,city,state,phone,f_id) values('$name','$address','$pc','$city','$state','$phone','$uid')";
     $res = mysqli_query($conn, $query) or die("Can't Execute Query...");
     header("location:payment_details.php");
 }
